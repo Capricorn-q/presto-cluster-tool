@@ -1,0 +1,28 @@
+{
+  "rootGroups": [
+    {
+      "name": "admin",
+      "softMemoryLimit": "100%",
+      "hardConcurrencyLimit": 10,
+      "maxQueued": 100,
+      "schedulingPolicy": "weighted",
+      "jmxExport": true,
+      "subGroups": [
+        {
+          "name": "dev",
+          "softMemoryLimit": "100%",
+          "hardConcurrencyLimit": 2,
+          "maxQueued": 20,
+          "schedulingWeight": 8
+        }
+      ]
+    }
+  ],
+  "selectors": [
+    {
+      "user": "dev",
+      "group": "admin.dev"
+    }
+  ],
+  "cpuQuotaPeriod": "1h"
+}
