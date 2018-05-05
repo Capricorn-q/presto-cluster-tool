@@ -158,6 +158,6 @@ fabric.properties
 .idea/checkstyle-idea.xml
 .idea/misc.xml
 .idea/modules.xml
-.idea/presto-cluster-manager.iml
 .idea/workspace.xml
 .idea/vcs.xml
+presto-cluster-manager.iml
