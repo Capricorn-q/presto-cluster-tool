@@ -160,3 +160,4 @@ fabric.properties
 .idea/modules.xml
 .idea/presto-cluster-manager.iml
 .idea/workspace.xml
+.idea/vcs.xml
