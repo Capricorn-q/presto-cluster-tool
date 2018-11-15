@@ -4,32 +4,32 @@ from fabric.operations import put
 from fabric.contrib.files import exists
 from fabric.tasks import execute
 
-# """
-#     usage:
-#         1. 修改对应的coordinator_hosts与worker_hosts
-#         2. 修改presto_install_dir与presto_backup_dir（对应服务器安装目录）
-#         3. 将presto-server|client的tar包放入pack目录中
-#         4. 执行 fab -f presto-cluster-tool.py deployCli|deploy|reload|start|stop|restart|rollback
+"""
+    usage:
+        1. 修改对应的coordinator_hosts与worker_hosts
+        2. 修改presto_install_dir与presto_backup_dir（对应服务器安装目录）
+        3. 将presto-server|client的tar包放入pack目录中
+        4. 执行 fab -f presto-cluster-tol.py deployCli|deploy|reload|start|stop|restart|rollback
 #
-#         deployCli:         发布presto-client
-#         deploy:            发布presto集群
-#         reload:            重新加载配置文件
-#         start:             启动集群
-#         stop:              停用集群
-#         restart:           重启集群
-#         rollback:          回滚操作(仅一次)
-# """
+        deployCli:         发布presto-client
+        deploy:            发布presto集群
+        reload:            重新加载配置文件
+        start:             启动集群
+        stop:              停用集群
+        restart:           重启集群
+        rollback:          回滚操作(仅一次，鸡肋操作，先无视)
+"""
 
 # == config ==
 # TODO edit your hosts
-coordinator_hosts = ['fp-bd1']
-worker_hosts = ['fp-bd2', 'fp-bd3', 'fp-bd4', 'fp-bd5']
+coordinator_hosts = ['bd1']
+worker_hosts = ['bd2', 'bd3', 'bd4', 'bd5']
 
 presto_name = 'presto-server'
 presto_tar = presto_name + "*.tar*"
 
 # TODO edit your path
-presto_install_dir = '/program'
+presto_install_dir = '/program/yourPrestoDir'
 presto_backup_dir = '/tmp/presto-backup'
 
 env.user = 'root'

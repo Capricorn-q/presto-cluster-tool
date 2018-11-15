@@ -1,8 +1,18 @@
-# presto集群辅助工具 
-**presto-cluster-manager**
+# presto集群管理工具
+**presto-cluster-tool**
 
-1.     env: 
-        python3 + fabric
+1.     support presto-0.1xx/0.2xx
+			
+		env: 
+		  python3 + fabric1.x
+         pip install 'fabric<2.0'
+         pip instlal fabric3
+         pip install presto-python-client
+         
+         see 
+         http://www.fabfile.org/installing-1.x.html  
+         https://pypi.org/project/presto-python-client
+
     
 2.     usage:
 		 `fab -f presto-cluster-tool.py deployCli|deploy|reload|start|stop|restart|rollback`
